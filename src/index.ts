@@ -55,6 +55,6 @@ app.delete('/enanos/:id', async (req: Request, res: Response) => {
 });
 
 const PORT = 3000;
-app.listen(PORT, () => {
-  console.log(`Backend escuchando en http://localhost:${PORT}`);
+app.listen(PORT, '0.0.0.0',() => {
+  console.log(`Backend escuchando en http://0.0.0.0:${PORT}`);
 });

@@ -1,0 +1,18 @@
+datasource db {
+  provider = "sqlite"
+  url      = "file:./dev.db"
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Enano {
+  id          Int      @id @default(autoincrement())
+  titulo      String
+  precio      Float
+  descripcion String
+  imagen      String
+  edad        Int
+  createdAt   DateTime @default(now())
+}
